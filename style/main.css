@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins',sans-serif;
+}
+body
+{
+    overflow: hidden;
+}
+section
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1c1c25;
+}
+section::before
+{
+    content: '';
+    position: absolute;
+    bottom: -40%;
+    left: 40%;
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(#f00,#f0f);
+    border-radius: 50%;
+}
+/*CRACHA*/
+.card
+{
+    position: relative;
+    width: 325px;
+    height: 508px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+.card .face
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    transform-style: preserve-3d;
+    transition: 1s;
+    backface-visibility: hidden;
+}
+
+.card:hover .face.front
+{
+    transform: rotateY(180deg);
+}
+.card .face.back
+{
+    transform: rotateY(180deg);
+}
+.card:hover .face.back
+{
+    transform: rotateY(360deg);
+}
+
+/*PARTE DA FRENTE*/
+
+.card .face.front .logo
+{
+   position: absolute;
+   top: 15px;
+   left: 15px;
+   width: 295px;
+}
+
+.card .face.front .foto
+{
+    position: absolute;
+    right: 98px;
+    top: 100px;
+    width: 118px;
+    height: 111px;
+    border-radius: 50%;
+}
+
+.card .face.front .bordaFoto
+{
+    position: absolute;
+    right: 93px;
+    top: 95px;
+    width: 128px;
+    height: 121px;
+    border-color: #fff;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 5px;
+}
+
+.card .face.front .nome
+{
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 240px;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 3px;
+    font-size: 30px;
+    text-shadow: 0 2px 1px #0005;
+    text-align: center;
+}
+
+.card .face.front .cargo
+{
+    position: absolute;
+    width: 100%;
+    top: 278px;
+    left: 0px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.card .face.front .number
+{
+    position: absolute;
+    width: 100%;
+    bottom: 145px;
+    left: 0px;
+    color: #fff;
+    font-weight:500;
+    letter-spacing: 6px;
+    font-size: 16px;
+    text-shadow: 0 2px 1px #0005;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+}
+
+.card .face.front .qrcode
+{
+    position: absolute;
+    width: 100px;
+    bottom: 35px;
+    left: 112px;
+    display: flex;
+}
+.card .face.front .qrcodeFundo
+{
+    content: '';
+    position: absolute;
+    height: 96px;
+    width: 96px;
+    bottom: 37px;
+    left: 114px;
+    background: #fff;
+    opacity: 0.2;
+}
+
+.card .face.front .faixa
+{
+   position: absolute;
+   bottom: 0px;
+   left: 0px;
+   height: 15px;
+   width: 100%;
+   border-radius: 0 0 15px 15px;
+}
+
+
+
+/*==========BACKFACE==========*/
+
+.card .face.back .logoBack
+{
+   position: absolute;
+   width: 100%;
+   border-radius: 15px 15px 0 0;
+}
+.card .face.back .nome
+{
+    position: absolute;
+    width: 100%;
+    top: 120px;
+    left: 0px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 20px;
+    text-shadow: #000;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.card .face.back .in a
+{
+    position: absolute;
+    width: 100%;
+    top: 180px;
+    left: 30px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-align: left;
+}
+.card .face.back .git a
+{
+    position: absolute;
+    width: 100%;
+    top: 230px;
+    left: 30px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-align: left;
+}
+.card .face.back .tel
+{
+    position: absolute;
+    width: 100%;
+    top: 280px;
+    left: 30px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-align: left;
+}
+i{
+    font-size: 30px;
+}
+
+.card .face.back .text
+{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    color: #fff;
+    font-size: 10px;
+    line-height: 1.4em;
+    font-weight: 300;
+
+}
+
+
+
+
+
+
+
